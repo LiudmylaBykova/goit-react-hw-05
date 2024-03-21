@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    width: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: hsl(0, 38%, 97%);
+}
+
+.formBtn {
+    color: #403c3cde;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+.formSvg {
+    vertical-align: middle;
+}
+
+.formInput {
+    font-size: 18px;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #403c3cde;
+    background-color: transparent;
+}

@@ -1,0 +1,27 @@
+.header {
+    width: 1420px;
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid whitesmoke;
+
+}
+
+.navLink {
+    width: 110px;
+    height: 40px;
+    padding: 8px 12px;
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.active {
+    background-color: hsl(30, 3%, 66%);
+}
