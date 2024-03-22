@@ -8,3 +8,8 @@
     color: rgb(44, 43, 41);
     background-color: rgb(250, 247, 246);
 }
+
+.showMoreBtn:hover,
+.showMoreBtn:focus {
+    background-color: hsl(30, 3%, 66%);
+}

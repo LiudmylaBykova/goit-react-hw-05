@@ -1,10 +1,11 @@
 .link {
     color: #bbb9b7;
+    font-size: 18px;
     font-weight: 500;
     text-decoration: none;
 }
 
-.linc:hover,
-.linc:focus {
-    color: hsl(352, 46%, 80%);
+.link:hover,
+.link:focus {
+    color: #b0470b;
 }

@@ -1,0 +1,17 @@
+.personCard {
+    width: 200px;
+    margin-bottom: 15px;
+    background-color: rgb(56, 58, 58);
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(156, 71, 5);
+    margin-left: 5px;
+}
+
+.character {
+    font-size: 16px;
+    margin-left: 5px;
+}

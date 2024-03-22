@@ -18,6 +18,7 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   const [isloading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
   const location = useLocation();
   const backLinkHref = useRef(location.state ?? "/home");
 
@@ -27,11 +28,12 @@ const MovieDetailsPage = () => {
   useEffect(() => {
     const fetchMoviesData = async () => {
       setIsLoading(true);
+      setError(false);
       try {
         const data = await requestMoviesById(movieId);
         setMovieData(data);
       } catch (error) {
-        console.log(error);
+        setError(true);
       } finally {
         setIsLoading(false);
       }
@@ -49,7 +51,7 @@ const MovieDetailsPage = () => {
     <>
       <Link className={css.link} to={backLinkHref.current}>
         <span>
-          <BiArrowBack />
+          <BiArrowBack className={css.linkSvg} />
         </span>
         Go back to movies list
       </Link>

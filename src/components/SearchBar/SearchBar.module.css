@@ -4,6 +4,12 @@
     padding: 10px;
     border-radius: 8px;
     background-color: hsl(0, 38%, 97%);
+    border: 1px solid transparent;
+}
+
+.form:hover,
+.form:focus {
+    border-color: rgb(190, 83, 21);
 }
 
 .formBtn {
@@ -14,7 +20,13 @@
 }
 
 .formSvg {
+    font-size: 32px;
     vertical-align: middle;
+}
+
+.formSvg:hover,
+.formSvg:focus {
+    color: rgb(156, 60, 5);
 }
 
 .formInput {

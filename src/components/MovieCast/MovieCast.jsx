@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { requestMovieCast } from "../../services/api.jsx";
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader.jsx";
+import css from "./MovieCast.module.css";
 
 const MovieCast = () => {
   const { movieId } = useParams();
@@ -34,19 +35,19 @@ const MovieCast = () => {
           {movieCastData.map((author) => {
             return (
               <li key={author.credit_id}>
-                <img
-                  src={
-                    author.profile_path
-                      ? `https://image.tmdb.org/t/p/w500/${author.profile_path}`
-                      : defaultImg
-                  }
-                  width={200}
-                  alt={author.name}
-                />
+                <div className={css.personCard}>
+                  <img
+                    src={
+                      author.profile_path
+                        ? `https://image.tmdb.org/t/p/w500/${author.profile_path}`
+                        : defaultImg
+                    }
+                    width={200}
+                    alt={author.name}
+                  />
 
-                <div>
-                  <p>{author.original_name}</p>
-                  <p>Character: {author.character}</p>
+                  <p className={css.name}>{author.original_name}</p>
+                  <p className={css.character}>Character: {author.character}</p>
                 </div>
               </li>
             );
