@@ -42,8 +42,8 @@ const MovieDetailsPage = () => {
     fetchMoviesData();
   }, [movieId]);
 
-  const vote = Math.floor(movieData.vote_average * 10);
-  let releaseDate = movieData.release_date
+  const rating = movieData.vote_average && movieData.vote_average.toFixed(1);
+  const releaseDate = movieData.release_date
     ? new Date(movieData.release_date).getFullYear()
     : "?";
 
@@ -65,7 +65,7 @@ const MovieDetailsPage = () => {
                 ? `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`
                 : defaultImg
             }
-            width={400}
+            width={350}
             alt={movieData.title}
           />
           <div>
@@ -74,7 +74,7 @@ const MovieDetailsPage = () => {
               <span className={css.releaseDate}>({releaseDate})</span>
             </p>
             <p className={css.description}>
-              User Score: <span className={css.descriptionSpan}>{vote}%</span>
+              Rating: <span className={css.descriptionSpan}>{rating}</span>
             </p>
             <div className={css.ganresWrap}>
               <p className={css.description}>Ganres:</p>
@@ -83,7 +83,7 @@ const MovieDetailsPage = () => {
                   {" "}
                   {movieData.genres.map((genre) => {
                     return (
-                      <span className={css.ganre} key={genre.id}>
+                      <span className={css.descriptionSpan} key={genre.id}>
                         {genre.name}
                       </span>
                     );
@@ -91,17 +91,18 @@ const MovieDetailsPage = () => {
                 </p>
               )}
             </div>
+
+            <div>
+              <p className={css.description}>Overview:</p>
+              <p className={css.overview}>{movieData.overview}</p>
+            </div>
           </div>
         </div>
-        <div>
-          <p className={css.descriptionSpan}>Overview:</p>
-          <p>{movieData.overview}</p>
-        </div>
 
-        <Link className={css.link} to="cast">
+        <Link className={css.pageLink} to="cast">
           Cast
         </Link>
-        <Link className={css.link} to="reviews">
+        <Link className={css.pageLink} to="reviews">
           Reviews
         </Link>
       </div>

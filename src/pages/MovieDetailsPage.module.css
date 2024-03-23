@@ -1,6 +1,6 @@
 .link {
     color: #b0470b;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin-right: 20px;
     margin-bottom: 30px;
@@ -13,7 +13,7 @@
 }
 
 .linkSvg {
-    font-size: 32px;
+    font-size: 28px;
     margin-right: 5px;
     vertical-align: middle;
 }
@@ -25,26 +25,31 @@
 .movieCard {
     display: flex;
     gap: 30px;
+    margin-bottom: 30px;
 }
 
 .movieTitle {
     font-size: 28px;
     font-weight: 600;
+    color: hsl(17, 84%, 27%);
 }
 
 .releaseDate {
     font-weight: 700;
-    color: hsl(17, 84%, 27%);
+    color: hsl(20, 15%, 92%);
 }
 
 .description {
     font-size: 22px;
+    font-weight: 500;
+    color: hsl(17, 84%, 27%);
 }
 
 .descriptionSpan {
     font-weight: 500;
-    font-size: 22px;
-    color: hsl(17, 84%, 27%);
+    font-size: 24px;
+    margin-right: 10px;
+    color: hsl(15, 29%, 95%);
 }
 
 .ganresWrap {
@@ -52,7 +57,20 @@
     gap: 15px;
 }
 
-.ganre {
-    margin-right: 10px;
-    color: hsl(17, 84%, 27%);
+.overview {
+    width: 1000px;
+}
+
+.pageLink {
+    color: #b0470b;
+    font-size: 32px;
+    font-weight: 700;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.pageLink:hover,
+.pageLink:focus {
+    color: hsl(19, 91%, 26%);
 }
